@@ -8,6 +8,22 @@
     "question": {"type": "string", "minLength": 1, "maxLength": 500},
     "choices": {"type": "array", "minItems": 2, "maxItems": 4},
     "base_scores": {"type": "object"},
+    "empirical_prior": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence"],
+      "properties": {
+        "evidence": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {"$ref": "#/$defs/evidence_selector"}
+          }
+        }
+      }
+    },
     "result_groups": {"type": "array", "items": {"enum": ["region", "age_bracket", "urbanicity"]}},
     "perspectives": {
       "type": "array",
@@ -26,6 +42,16 @@
       }
     },
     "seed": {"type": "string", "maxLength": 128}
+  },
+  "$defs": {
+    "evidence_selector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attribute", "conditions"],
+      "properties": {
+        "attribute": {"type": "string"},
+        "conditions": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    }
   }
 }
-

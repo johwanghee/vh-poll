@@ -15,7 +15,7 @@ Before using `uv`, set `UV_PROJECT_ENVIRONMENT` to `<resolved-data-directory>/ve
 2. If processed data exists, continue. If only raw shards exist, run `uv run --project <skill-directory> python scripts/preprocess_personas.py`.
 3. If data is absent, report the exact manifest size and resolved cache path, then obtain explicit user consent before running `uv run --project <skill-directory> python scripts/setup_data.py download`. Never infer consent from the original poll request.
 4. If downloading or local data access is impossible, use `uv run --project <skill-directory> python scripts/simulate_vote.py --rule <rule.json> --demo`; label the result as an LLM-designed demo, not a Persona 1M aggregation.
-5. Read `references/attribute-index.json` and `references/attributes/core.json`. Select at most two relevant domain files listed below and read them completely. Create three independent perspectives conforming to `references/ensemble-schema.json`: direct domain evidence, behavior/personality, and values/lifestyle. Keep choices, base scores, seed, and effect scale comparable across perspectives. Write JSON only; do not embed the question in a shell command.
+5. Read `references/attribute-index.json` and `references/attributes/core.json`. Select at most two relevant domain files listed below and read them completely. When every choice has an exact option-level catalog attribute, add `empirical_prior.evidence` selectors for all choices. Use only direct positive-interest values such as `Play`, `Follow`, and `Casual`; never use broad proxies. Otherwise omit `empirical_prior` and provide neutral or explicitly justified fallback `base_scores`. Create three independent perspectives conforming to `references/ensemble-schema.json`: contextual domain evidence, behavior/personality, and values/lifestyle. Do not reuse empirical-prior attributes as perspective factors because the validator rejects double counting. Keep choices, fallback base scores, seed, and effect scale comparable across perspectives. Write JSON only; do not embed the question in a shell command.
 6. Run `uv run --project <skill-directory> python scripts/simulate_ensemble.py --ensemble <ensemble.json> --mode expected --output <result.json>`. Use the single-rule validator and simulator only for diagnostics or when explicitly requested. Use `sampled` only when requested.
 8. Render a short result and always end with: `AI 가상인류 시뮬레이션이며 실제 설문 결과가 아닙니다.`
 
@@ -24,9 +24,10 @@ For “다시 돌려줘” or “다른 결과로”, preserve the rule and pass
 ## Analyze the question
 
 - Preserve explicit choices; otherwise create two to four concise choices without changing the premise.
-- Assign base scores totaling 1. Use only attributes and exact values from the selected catalog files.
+- Assign fallback base scores totaling 1. Treat them as authored assumptions, not observed popularity.
+- Use `empirical_prior` only when each choice maps cleanly to its own direct catalog attribute. Provide one to three selectors per choice, use symmetric value criteria, and omit it for incomplete or proxy-only mappings. The engine normalizes observed match counts into the shared prior and reports match coverage and missingness.
 - Select three to eight directly relevant factors when the catalog supports them. Prefer domain-specific attributes over broad proxies, and omit weakly related factors rather than filling a quota.
-- Create exactly three perspectives by default, with two to six factors each. Do not reuse an attribute across perspectives unless it is independently central; repeated support then becomes a robust signal.
+- Create exactly three perspectives by default, with two to six factors each. Do not reuse an empirical-prior attribute in any perspective. Do not reuse other attributes across perspectives unless independently central; repeated support then becomes a robust signal.
 - Keep one shared base score map and comparable effect magnitudes across perspectives. Do not change them to force agreement or a more dramatic result.
 - Use demographic attributes primarily for result breakdowns, not choice effects.
 - Keep each effect within -0.25 to 0.25 and interactions within -0.15 to 0.15.
@@ -45,11 +46,11 @@ Route questions with these catalog files:
 
 ## Present results
 
-Lead with an apt emoji and `persona_count_per_perspective`. Never multiply it by the perspective count because the same personas are re-evaluated. Show ensemble percentages and min–max ranges. If `winner_assessment.status` is `contested`, call it an interpretation-sensitive close race and do not declare a definitive winner. If stable, report agreement across all perspectives. Use `robust_signals` first; when empty, say no factor repeated across independent perspectives. Include one clearly fictional witty line.
+Lead with an apt emoji and `persona_count_per_perspective`. Never multiply it by the perspective count because the same personas are re-evaluated. Show ensemble percentages and min–max ranges. In `expected` mode, label `count` as `확률 합계 환산`, never as people who actually cast votes; only `sampled_vote_count` is a hard simulated count. If `prior_evidence.mode` is `empirical_direct`, show its per-choice `matched_personas`, `share_of_evidence_matches`, `any_match_percent`, and missingness before discussing contextual factors. If it is `authored`, state that the starting scores are scenario assumptions. If `winner_assessment.status` is `contested`, call it an interpretation-sensitive close race and do not declare a definitive winner. If stable, report agreement across all perspectives. Use `robust_signals` first; when empty, say no factor repeated across independent perspectives. Include one clearly fictional witty line.
 
 When explaining a result, separate evidence into three labels:
 
-- **Calculated from Persona data:** percentages, ranges, group counts, lifts, missing counts, and `observed_coverage`.
+- **Calculated from Persona data:** empirical-prior matches and coverage, percentages, ranges, group counts, lifts, missing counts, and `observed_coverage`.
 - **Scenario assumption:** why an attribute supports a choice and the assigned effect size.
 - **Robustness judgment:** stable/contested winner and signals repeated across perspectives.
 

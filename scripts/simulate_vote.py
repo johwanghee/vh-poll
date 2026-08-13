@@ -136,9 +136,9 @@ def calculate(rule: dict, mode: str, demo: bool, demo_size: int, catalog_documen
         aggregate = connection.execute("SELECT count(*), " + ", ".join(f"sum(p{i})" for i in range(len(choices))) + " FROM vote_rows").fetchone()
         count = aggregate[0]
         totals = list(aggregate[1:])
-        results = [{"id": choice, "label": labels[choice], "votes": round(totals[index]), "percent": round(totals[index] * 100 / count, 2)} for index, choice in enumerate(choices)]
-        difference = count - sum(result["votes"] for result in results)
-        results[max(range(len(results)), key=lambda index: results[index]["votes"])]["votes"] += difference
+        results = [{"id": choice, "label": labels[choice], "count": round(totals[index]), "percent": round(totals[index] * 100 / count, 2)} for index, choice in enumerate(choices)]
+        difference = count - sum(result["count"] for result in results)
+        results[max(range(len(results)), key=lambda index: results[index]["count"])]["count"] += difference
         preference_groups = discover_preference_groups(connection, rule, catalog_document, choices, totals, count)
         groups = {}
         for name in rule["result_groups"]:
@@ -146,14 +146,15 @@ def calculate(rule: dict, mode: str, demo: bool, demo_size: int, catalog_documen
             key = f"CASE WHEN {identifier(name)} IN ({valid}) THEN {identifier(name)} ELSE 'Unknown' END"
             rows = connection.execute(f"SELECT {key} AS group_name, count(*), " + ", ".join(f"sum(p{i})" for i in range(len(choices))) + " FROM vote_rows GROUP BY group_name ORDER BY count(*) DESC").fetchall()
             groups[name] = [{"group": row[0], "count": row[1], "percentages": {choice: round(row[index + 2] * 100 / row[1], 2) for index, choice in enumerate(choices)}} for row in rows]
-        if rule["factors"]:
-            missing_sql = " + ".join(f"sum(CASE WHEN {identifier(factor['attribute'])} IS NULL THEN 1 ELSE 0 END)" for factor in rule["factors"])
+        factor_attributes = sorted({factor["attribute"] for factor in rule["factors"]})
+        if factor_attributes:
+            missing_sql = " + ".join(f"sum(CASE WHEN {identifier(name)} IS NULL THEN 1 ELSE 0 END)" for name in factor_attributes)
             missing = connection.execute(f"SELECT {missing_sql} FROM vote_rows").fetchone()[0]
         else:
             missing = 0
     finally:
         connection.close()
-    return {"question": rule["question"], "mode": mode, "demo": demo, "engine": "duckdb-memory", "persona_count": count, "choices": results, "preference_groups": preference_groups, "groups": groups, "top_factors": sorted(rule["factors"], key=lambda factor: max(abs(float(value)) for value in factor["effects"].values()), reverse=True)[:3], "missing_factor_value_count": missing, "disclaimer": "AI 가상인류 시뮬레이션이며 실제 설문 결과가 아닙니다."}
+    return {"question": rule["question"], "mode": mode, "demo": demo, "engine": "duckdb-memory", "persona_count": count, "count_type": "expected_probability_sum" if mode == "expected" else "sampled_vote_count", "choices": results, "preference_groups": preference_groups, "groups": groups, "top_factors": sorted(rule["factors"], key=lambda factor: max(abs(float(value)) for value in factor["effects"].values()), reverse=True)[:3], "missing_factor_attribute_cells": missing, "disclaimer": "AI 가상인류 시뮬레이션이며 실제 설문 결과가 아닙니다."}
 
 
 def main() -> None:
