@@ -73,6 +73,37 @@ $vh-poll 방금 결과를 다른 시드로 다시 돌려줘
 $vh-poll 왜 이런 결과가 나왔는지 근거를 설명해줘
 ```
 
+## 버전과 업데이트
+
+이 프로젝트는 [Semantic Versioning](https://semver.org/)을 따릅니다. GitHub Release의 `vX.Y.Z` 태그가 검증된 공개 버전이며 `main`은 다음 릴리스를 위한 최신 개발 상태일 수 있습니다.
+
+- 패치(`v0.1.1`): 호환되는 버그·문서 수정
+- 마이너(`v0.2.0`): 규칙 스키마, 집계 방식 또는 출력 기능 변경
+- 메이저(`v1.0.0`): 안정화 이후 호환되지 않는 변경
+
+설치된 Git 저장소를 최신 공개 버전으로 업데이트하려면 다음 명령을 사용합니다. `<skill-directory>`에는 실제 설치 경로를 넣습니다.
+
+```bash
+git -C <skill-directory> fetch --tags
+git -C <skill-directory> switch --detach v0.1.0
+```
+
+예를 들어 공용 설치 경로를 사용한다면:
+
+```bash
+git -C ~/.agents/skills/vh-poll fetch --tags
+git -C ~/.agents/skills/vh-poll switch --detach v0.1.0
+```
+
+`main`의 최신 변경을 추적하려는 개발자는 다음처럼 전환합니다.
+
+```bash
+git -C <skill-directory> switch main
+git -C <skill-directory> pull --ff-only
+```
+
+업데이트 후 새 Agent 세션을 시작하세요. Persona 데이터는 스킬 저장소 밖의 캐시에 있으므로 일반적인 스킬 업데이트에서는 다시 다운로드하지 않습니다.
+
 ## 첫 실행과 데이터
 
 첫 투표 때 데이터가 없다면 스킬은 다운로드 크기와 저장 경로를 먼저 알리고 명시적인 동의를 구합니다. 원본 공개 릴리스는 10개 Parquet 샤드, 4,167,729,762바이트(약 3.88 GiB)이며 다운로드 후 무결성을 검사합니다. 이후 999,847개 행과 선택된 513개 속성을 로컬 ZSTD Parquet로 전처리합니다.
