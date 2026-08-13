@@ -85,14 +85,14 @@ $vh-poll 왜 이런 결과가 나왔는지 근거를 설명해줘
 
 ```bash
 git -C <skill-directory> fetch --tags
-git -C <skill-directory> switch --detach v0.1.0
+git -C <skill-directory> switch --detach v0.2.1
 ```
 
 예를 들어 공용 설치 경로를 사용한다면:
 
 ```bash
 git -C ~/.agents/skills/vh-poll fetch --tags
-git -C ~/.agents/skills/vh-poll switch --detach v0.1.0
+git -C ~/.agents/skills/vh-poll switch --detach v0.2.1
 ```
 
 `main`의 최신 변경을 추적하려는 개발자는 다음처럼 전환합니다.
