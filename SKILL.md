@@ -59,4 +59,6 @@ Never describe factor directions as learned correlations, causal effects, or sur
 
 Resolve data under `VIRTUAL_HUMAN_POLL_DATA_DIR` or `~/.cache/vh-poll`. Keep raw, processed, metadata, dependency environments, and tool caches outside the skill folder. Store processed personas as ZSTD-compressed Parquet. Query and aggregate that Parquet directly with `duckdb.connect(":memory:")`; never create a DuckDB database file. Keep direct Python dependencies limited to `duckdb` and `huggingface-hub`. Verify official manifest byte sizes and SHA-256 hashes. Never delete raw data unless the user explicitly requests deletion and confirms the exact resolved path.
 
+Read `DATA_LICENSE_NOTICE.md` before downloading or redistributing dataset-derived material. Do not describe the combined Persona release as MIT, CC-BY, or another single license; the official release keeps source-specific licenses and terms in force.
+
 The official encoding is 645 packed bytes for 1,290 fields. Decode the low nibble for even field indexes and high nibble for odd indexes, apply the null bitmap, then apply sparse overrides. The preprocessing CLI implements this order and refuses incompatible schemas.

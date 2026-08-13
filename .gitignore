@@ -8,6 +8,7 @@
 !/SKILL.md
 !/pyproject.toml
 !/uv.lock
+!/DATA_LICENSE_NOTICE.md
 
 !/agents/
 /agents/*
