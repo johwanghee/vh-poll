@@ -1,0 +1,41 @@
+{
+  "source": "MatrAIx persona_codes.schema.json format_version 2",
+  "attribute_count": 513,
+  "domains": {
+    "core": {
+      "file": "attributes/core.json",
+      "description": "Basic breakdown fields and general decision traits; always available.",
+      "attribute_count": 13
+    },
+    "decision-values": {
+      "file": "attributes/decision-values.json",
+      "description": "Personality, values, risk, novelty, routine, spending, and decision preferences.",
+      "attribute_count": 164
+    },
+    "food": {
+      "file": "attributes/food.json",
+      "description": "Cuisine, food, drink, and cooking interests for eating-related polls.",
+      "attribute_count": 49
+    },
+    "lifestyle-hobbies": {
+      "file": "attributes/lifestyle-hobbies.json",
+      "description": "Daily habits, home activities, hobbies, and leisure patterns.",
+      "attribute_count": 77
+    },
+    "culture-media": {
+      "file": "attributes/culture-media.json",
+      "description": "Books, film, music, games, arts, and media interests.",
+      "attribute_count": 153
+    },
+    "sports-outdoors": {
+      "file": "attributes/sports-outdoors.json",
+      "description": "Sports, exercise, competition, and outdoor activities.",
+      "attribute_count": 42
+    },
+    "consumer-adventure": {
+      "file": "attributes/consumer-adventure.json",
+      "description": "Travel, shopping, products, transport, devices, and environment-related preferences.",
+      "attribute_count": 15
+    }
+  }
+}

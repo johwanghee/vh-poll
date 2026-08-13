@@ -1,0 +1,997 @@
+{
+  "domain": "culture-media",
+  "description": "Books, film, music, games, arts, and media interests.",
+  "attributes": {
+    "cult_united_states": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_canada": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_mexico": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_brazil": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_argentina": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_united_kingdom": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_france": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_germany": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_italy": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_spain": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_netherlands": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_sweden": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_poland": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_russia": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_turkey": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_egypt": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_saudi_arabia": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_uae": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_israel": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_iran": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_nigeria": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_kenya": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_south_africa": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_ethiopia": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_india": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_pakistan": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_bangladesh": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_china": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_japan": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_south_korea": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_vietnam": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_thailand": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_indonesia": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_philippines": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_australia": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_new_zealand": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_singapore": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_malaysia": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_greece": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "cult_portugal": [
+      "Native",
+      "Lived there",
+      "Visited",
+      "Studied",
+      "Unfamiliar"
+    ],
+    "musg_pop": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_rock": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_hip_hop": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_r_b": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_jazz": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_blues": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_classical": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_opera": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_country": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_folk": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_reggae": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_reggaeton": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_electronic": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_house": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_techno": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_trance": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_drum_bass": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_metal": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_punk": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_indie": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_k_pop": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_j_pop": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_latin": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_afrobeats": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_gospel": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_soul": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_funk": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_disco": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_ambient": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_lo_fi": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_bluegrass": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_ska": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_synthwave": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_trap": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "musg_bollywood": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_action": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_adventure": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_comedy": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_drama": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_horror": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_thriller": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_sci_fi": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_fantasy": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_romance": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_documentary": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_animation": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_crime": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_mystery": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_historical": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_war": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_western": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_musical": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_noir": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_superhero": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_indie_film": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_art_house": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_biopic": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_comedy_drama": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "filmg_disaster": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_literary_fiction": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_science_fiction": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_fantasy": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_mystery": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_thriller": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_romance": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_historical_fiction": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_horror": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_biography": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_memoir": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_self_help": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_business": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_popular_science": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_history": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_philosophy": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_poetry": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_young_adult": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_graphic_novels": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_true_crime": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_travel_writing": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_cookbooks": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "bookg_essays": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Dislike"
+    ],
+    "lstyle_smoking": [
+      "Never",
+      "Former",
+      "Occasional",
+      "Regular"
+    ],
+    "lstyle_caffeine": [
+      "None",
+      "Low",
+      "Moderate",
+      "High"
+    ],
+    "lstyle_shopping_style": [
+      "Researcher",
+      "Impulse buyer",
+      "Bargain hunter",
+      "Brand loyal",
+      "Minimalist"
+    ],
+    "lstyle_travel_freq": [
+      "Frequent flyer",
+      "A few trips/yr",
+      "Occasional",
+      "Rare",
+      "Homebody"
+    ],
+    "lstyle_commute_mode": [
+      "Car",
+      "Public transit",
+      "Bike",
+      "Walk",
+      "Remote",
+      "Rideshare"
+    ],
+    "lstyle_pet_ownership": [
+      "Dog",
+      "Cat",
+      "Multiple pets",
+      "Other",
+      "None"
+    ],
+    "lstyle_screen_time": [
+      "<2 hrs",
+      "2-4 hrs",
+      "4-8 hrs",
+      "8+ hrs"
+    ],
+    "lstyle_social_battery": [
+      "Strong introvert",
+      "Introvert",
+      "Ambivert",
+      "Extrovert",
+      "Strong extrovert"
+    ],
+    "lstyle_planning_horizon": [
+      "Day-to-day",
+      "Weekly",
+      "Monthly",
+      "Yearly",
+      "Multi-year"
+    ],
+    "lstyle_punctuality": [
+      "Always early",
+      "On time",
+      "Usually late",
+      "Unpredictable"
+    ],
+    "lstyle_tidiness": [
+      "Spotless",
+      "Tidy",
+      "Lived-in",
+      "Cluttered",
+      "Chaotic"
+    ],
+    "lstyle_frugality": [
+      "Frugal saver",
+      "Balanced",
+      "Spender",
+      "Splurger"
+    ],
+    "lstyle_giving": [
+      "Regular donor",
+      "Occasional",
+      "Rare",
+      "Never"
+    ],
+    "lstyle_news_freq": [
+      "Constant",
+      "Daily",
+      "Weekly",
+      "Rarely",
+      "Avoids news"
+    ],
+    "lstyle_reading_freq": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "lstyle_gaming_freq": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "lstyle_streaming_hours": [
+      "0-2",
+      "3-7",
+      "8-15",
+      "16+"
+    ],
+    "lstyle_music_listening": [
+      "All day",
+      "Daily",
+      "Sometimes",
+      "Rarely"
+    ],
+    "lstyle_podcast_listening": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "lstyle_primary_social": [
+      "Instagram",
+      "TikTok",
+      "X / Twitter",
+      "Facebook",
+      "LinkedIn",
+      "YouTube",
+      "Reddit",
+      "None"
+    ],
+    "lstyle_primary_messenger": [
+      "WhatsApp",
+      "iMessage",
+      "WeChat",
+      "Telegram",
+      "Signal",
+      "Messenger",
+      "SMS"
+    ],
+    "lstyle_device_ecosystem": [
+      "Apple",
+      "Android/Google",
+      "Windows",
+      "Mixed",
+      "Linux"
+    ],
+    "lstyle_browser": [
+      "Chrome",
+      "Safari",
+      "Firefox",
+      "Edge",
+      "Brave",
+      "Other"
+    ],
+    "lstyle_payment_pref": [
+      "Credit card",
+      "Debit card",
+      "Mobile wallet",
+      "Cash",
+      "BNPL",
+      "Crypto"
+    ],
+    "lstyle_banking_style": [
+      "Traditional bank",
+      "Neobank",
+      "Credit union",
+      "Mostly cash",
+      "Unbanked"
+    ],
+    "lstyle_investment_style": [
+      "Index investor",
+      "Active trader",
+      "Crypto-heavy",
+      "Real estate",
+      "Cash saver",
+      "None"
+    ],
+    "lstyle_subscription_count": [
+      "0-2",
+      "3-5",
+      "6-10",
+      "10+"
+    ],
+    "lstyle_fashion_sense": [
+      "Trend-setter",
+      "Trend-follower",
+      "Classic",
+      "Practical",
+      "Indifferent"
+    ],
+    "lstyle_hobby_intensity": [
+      "Obsessive",
+      "Dedicated",
+      "Casual",
+      "Dabbler",
+      "None"
+    ],
+    "lstyle_vacation_style": [
+      "Adventure",
+      "Relaxation",
+      "Culture",
+      "Luxury",
+      "Budget backpacking",
+      "Staycation"
+    ],
+    "lstyle_morning_routine": [
+      "Highly structured",
+      "Loosely structured",
+      "Rushed",
+      "Slow",
+      "None"
+    ],
+    "lstyle_volunteering": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ]
+  }
+}

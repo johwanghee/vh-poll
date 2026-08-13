@@ -1,0 +1,315 @@
+{
+  "domain": "food",
+  "description": "Cuisine, food, drink, and cooking interests for eating-related polls.",
+  "attributes": {
+    "skill_cooking": [
+      "Master",
+      "Advanced",
+      "Intermediate",
+      "Beginner",
+      "None"
+    ],
+    "skill_baking": [
+      "Master",
+      "Advanced",
+      "Intermediate",
+      "Beginner",
+      "None"
+    ],
+    "topic_cooking": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "topic_wine": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "topic_coffee": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "topic_tea": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "topic_baking": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "cuis_italian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_french": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_spanish": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_greek": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_mexican": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_peruvian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_brazilian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_american_bbq": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_southern_soul_food": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_cajun": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_chinese": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_sichuan": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_cantonese": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_japanese": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_korean": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_thai": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_vietnamese": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_indian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_pakistani": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_middle_eastern": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_lebanese": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_turkish": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_moroccan": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_ethiopian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_nigerian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_caribbean": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_german": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_scandinavian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_russian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_spanish_tapas": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_sushi": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_ramen": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_vegan": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_vegetarian": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "cuis_seafood": [
+      "Love",
+      "Like",
+      "Neutral",
+      "Avoid"
+    ],
+    "lstyle_diet_type": [
+      "Omnivore",
+      "Flexitarian",
+      "Vegetarian",
+      "Vegan",
+      "Pescatarian",
+      "Keto/low-carb"
+    ],
+    "lstyle_cooking_freq": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "lstyle_coffee_ritual": [
+      "Home brew",
+      "Café regular",
+      "Office coffee",
+      "Tea instead",
+      "None"
+    ],
+    "hob_bread_baking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_home_brewing": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_winemaking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_cheesemaking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ]
+  }
+}

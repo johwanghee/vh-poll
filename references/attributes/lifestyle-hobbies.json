@@ -1,0 +1,545 @@
+{
+  "domain": "lifestyle-hobbies",
+  "description": "Daily habits, home activities, hobbies, and leisure patterns.",
+  "attributes": {
+    "lstyle_alcohol_use": [
+      "Never",
+      "Rarely",
+      "Socially",
+      "Regularly",
+      "Heavily"
+    ],
+    "hob_knitting": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_crocheting": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_pottery": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_woodworking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_metalworking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_leatherworking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_candle_making": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_origami": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_calligraphy": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_scrapbooking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_quilting": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_embroidery": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_jewelry_making": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_model_building": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_coin_collecting": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_stamp_collecting": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_antiquing": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_vegetable_gardening": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_bonsai": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_aquariums": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_beekeeping": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_birdwatching": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_stargazing": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_geocaching": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_rock_climbing": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_bouldering": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_kayaking": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_paddleboarding": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_scuba_diving": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_snorkeling": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_skydiving": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_paragliding": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_horseback_riding": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_foraging": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_karaoke": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_ballroom_dance": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_salsa_dancing": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_improv": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_stand_up_comedy": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_juggling": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_whittling": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_letterpress": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_urban_sketching": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_genealogy": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_metal_detecting": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "hob_cosplay": [
+      "Avid",
+      "Active",
+      "Occasional",
+      "Curious",
+      "Never"
+    ],
+    "habit_journaling": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_meditation": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_to_do_lists": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_goal_setting": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_daily_reflection": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_budget_tracking": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_meal_prepping": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_stretching_mobility": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_morning_walk": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_phone_free_downtime": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_gratitude_practice": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_reading_before_bed": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_naps": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_power_snoozing_alarm": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_skipping_breakfast": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_late_night_snacking": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_nail_biting_fidgeting": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_doomscrolling": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_multitab_browsing": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_inbox_zero_discipline": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_saving_receipts": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_pre_trip_overpacking": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_talking_to_oneself": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_humming_whistling": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_cold_showers": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_step_counting": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_hydration_tracking": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_backing_up_files": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_re_reading_texts_before_sending": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ],
+    "habit_procrasti_cleaning": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ]
+  }
+}

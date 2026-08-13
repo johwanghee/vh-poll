@@ -1,0 +1,1144 @@
+{
+  "domain": "decision-values",
+  "description": "Personality, values, risk, novelty, routine, spending, and decision preferences.",
+  "attributes": {
+    "domain_characteristics": [
+      "Cutting-edge researcher",
+      "Practitioner",
+      "Educator",
+      "Student",
+      "Hobbyist",
+      "Skeptic / critic",
+      "Cross-disciplinary"
+    ],
+    "modality_pref": [
+      "Text",
+      "Code",
+      "Visual / diagram",
+      "Tabular",
+      "Step-by-step",
+      "Examples-first"
+    ],
+    "accessibility_needs": [
+      "None",
+      "Visual",
+      "Hearing",
+      "Motor",
+      "Cognitive / neurodivergent",
+      "Language barrier"
+    ],
+    "big5_imagination": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_artistic_interest": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_emotionality": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_adventurousness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_intellect": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_liberalism": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_self_efficacy": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_orderliness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_dutifulness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_achievement_striving": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_self_discipline": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_cautiousness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_friendliness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_gregariousness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_assertiveness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_activity_level": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_excitement_seeking": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_cheerfulness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_trust": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_morality": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_altruism": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_cooperation": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_modesty": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_sympathy": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_anxiety": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_anger": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_depression": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_self_consciousness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_immoderation": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "big5_vulnerability": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "peeve_typos": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_being_interrupted": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_lateness": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_loud_chewing": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_slow_walkers": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_spam": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_clickbait": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_unexplained_jargon": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_condescension": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_forced_small_talk": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_cold_calls": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_pop_up_ads": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_auto_play_video": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "peeve_paywalls": [
+      "Major peeve",
+      "Annoys",
+      "Neutral",
+      "Fine"
+    ],
+    "trait_curiosity": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_creativity": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_love_of_learning": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_open_mindedness": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_perspective": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_bravery": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_perseverance": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_honesty": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_zest": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_capacity_for_love": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_kindness": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_social_intelligence": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_teamwork": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_fairness": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_leadership": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_forgiveness": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_humility": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_prudence": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_self_regulation": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_appreciation_of_beauty": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_gratitude": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_hope_optimism": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_playfulness": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_spirituality": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_ambition": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_empathy": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_resilience": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_discipline": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_generosity": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_loyalty": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_competitiveness": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "trait_adaptability": [
+      "Signature",
+      "Strong",
+      "Moderate",
+      "Slight",
+      "Absent"
+    ],
+    "val_family": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_career_success": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_wealth": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_health": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_personal_freedom": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_security_stability": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_adventure": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_tradition": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_power_influence": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_achievement": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_creativity_self_expression": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_community": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_spirituality_faith": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_knowledge_truth": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_social_status": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_independence": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_justice_fairness": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_loyalty": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_sustainability": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_recognition": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_helping_others": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_personal_growth": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_fun_enjoyment": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_integrity_honesty": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_beauty_aesthetics": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_order_structure": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_patriotism": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_equality": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "val_privacy": [
+      "Core value",
+      "Important",
+      "Moderate",
+      "Minor",
+      "Irrelevant"
+    ],
+    "pref_team_vs_solo": [
+      "Strongly team",
+      "Team-leaning",
+      "Mixed",
+      "Solo-leaning",
+      "Strongly solo"
+    ],
+    "pref_plan_vs_spontaneous": [
+      "Highly planned",
+      "Planned",
+      "Balanced",
+      "Spontaneous",
+      "Highly spontaneous"
+    ],
+    "pref_city_vs_nature": [
+      "City lover",
+      "Prefers city",
+      "Either",
+      "Prefers nature",
+      "Nature lover"
+    ],
+    "pref_routine_vs_variety": [
+      "Craves routine",
+      "Routine-leaning",
+      "Balanced",
+      "Variety-leaning",
+      "Craves variety"
+    ],
+    "pref_speed_vs_accuracy": [
+      "Speed first",
+      "Speed-leaning",
+      "Balanced",
+      "Accuracy-leaning",
+      "Accuracy first"
+    ],
+    "pref_quality_vs_quantity": [
+      "Quality first",
+      "Quality-leaning",
+      "Balanced",
+      "Quantity-leaning",
+      "Quantity first"
+    ],
+    "pref_logic_vs_intuition": [
+      "Pure logic",
+      "Logic-leaning",
+      "Balanced",
+      "Intuition-leaning",
+      "Pure intuition"
+    ],
+    "pref_save_vs_spend": [
+      "Hard saver",
+      "Saver-leaning",
+      "Balanced",
+      "Spender-leaning",
+      "Free spender"
+    ],
+    "pref_lead_vs_follow": [
+      "Always leads",
+      "Leans lead",
+      "Situational",
+      "Leans support",
+      "Prefers to follow"
+    ],
+    "pref_indoor_vs_outdoor": [
+      "Strongly indoor",
+      "Indoor-leaning",
+      "Either",
+      "Outdoor-leaning",
+      "Strongly outdoor"
+    ],
+    "pref_early_vs_late": [
+      "Bleeding edge",
+      "Early adopter",
+      "Mainstream",
+      "Late adopter",
+      "Laggard"
+    ],
+    "pref_text_vs_call": [
+      "Text only",
+      "Prefers text",
+      "Either",
+      "Prefers calls",
+      "Calls only"
+    ],
+    "pref_big_group_vs_one_on_one": [
+      "Loves big groups",
+      "Group-leaning",
+      "Either",
+      "1-on-1 leaning",
+      "One-on-one only"
+    ],
+    "pref_novelty_vs_familiarity": [
+      "Always novel",
+      "Novelty-leaning",
+      "Balanced",
+      "Comfort-leaning",
+      "Always familiar"
+    ],
+    "pref_detail_brief_vs_full": [
+      "Just the gist",
+      "Brief-leaning",
+      "Balanced",
+      "Detail-leaning",
+      "Every detail"
+    ],
+    "pref_competition_vs_collab": [
+      "Highly competitive",
+      "Competitive",
+      "Balanced",
+      "Collaborative",
+      "Highly collaborative"
+    ],
+    "pref_stability_vs_change": [
+      "Craves stability",
+      "Stability-leaning",
+      "Balanced",
+      "Change-leaning",
+      "Craves change"
+    ],
+    "bfi2_domain_extraversion": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_domain_agreeableness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_domain_conscientiousness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_domain_negative_emotionality": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_domain_open_mindedness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_sociability": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_assertiveness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_energy_level": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_compassion": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_respectfulness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_trust": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_organization": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_productiveness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_responsibility": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_anxiety": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_depression": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_emotional_volatility": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_intellectual_curiosity": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_aesthetic_sensitivity": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "bfi2_facet_creative_imagination": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_self_direction": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_stimulation": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_hedonism": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_achievement": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_power": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_security": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_conformity": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_tradition": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_benevolence": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "schwartz_value_universalism": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "sdt_need_autonomy": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "sdt_need_competence": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "sdt_need_relatedness": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "need_for_cognition": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "need_for_closure": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "dospert_ethical_risk_tolerance": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "dospert_financial_risk_tolerance": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "dospert_recreational_risk_tolerance": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ],
+    "dospert_social_risk_tolerance": [
+      "Very high",
+      "High",
+      "Average",
+      "Low",
+      "Very low"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Virtual Human Poll"
+  short_description: "Playful Persona 1M balance polls"
+  default_prompt: "Use $vh-poll to run a playful virtual-human balance poll for this question."
+

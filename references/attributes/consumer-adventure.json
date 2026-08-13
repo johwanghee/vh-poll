@@ -1,0 +1,109 @@
+{
+  "domain": "consumer-adventure",
+  "description": "Travel, shopping, products, transport, devices, and environment-related preferences.",
+  "attributes": {
+    "device_context": [
+      "Desktop, focused",
+      "Mobile, on-the-go",
+      "Voice assistant",
+      "Accessibility tool",
+      "Low-bandwidth"
+    ],
+    "fam_brand_marketing": [
+      "Expert",
+      "Proficient",
+      "Familiar",
+      "Aware",
+      "None"
+    ],
+    "fam_fashion_design": [
+      "Expert",
+      "Proficient",
+      "Familiar",
+      "Aware",
+      "None"
+    ],
+    "topic_travel": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "topic_fashion": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "topic_home_improvement": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "topic_environment": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "att_brand_loyalty": [
+      "Enthusiast",
+      "Positive",
+      "Neutral",
+      "Skeptical",
+      "Opposed"
+    ],
+    "att_fast_fashion": [
+      "Enthusiast",
+      "Positive",
+      "Neutral",
+      "Skeptical",
+      "Opposed"
+    ],
+    "ind_travel_tourism": [
+      "Veteran",
+      "Experienced",
+      "Some exposure",
+      "None"
+    ],
+    "ind_transportation": [
+      "Veteran",
+      "Experienced",
+      "Some exposure",
+      "None"
+    ],
+    "acad_environmental_science": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "demo_home_language": [
+      "Same as primary",
+      "Bilingual home",
+      "Heritage language",
+      "Mixed languages"
+    ],
+    "lifex_childhood_environment": [
+      "Stable & secure",
+      "Modest but steady",
+      "Turbulent",
+      "Privileged",
+      "Hardship",
+      "Frequently uprooted"
+    ],
+    "lifex_travel_breadth": [
+      "Never left country",
+      "A few countries",
+      "Well-traveled",
+      "Lived abroad",
+      "Global nomad"
+    ]
+  }
+}

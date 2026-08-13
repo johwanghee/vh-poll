@@ -1,0 +1,43 @@
+# Public-release allowlist: ignore everything unless explicitly included below.
+/*
+
+# Repository metadata
+!/.gitignore
+
+# Codex skill package
+!/SKILL.md
+!/pyproject.toml
+!/uv.lock
+
+!/agents/
+/agents/*
+!/agents/openai.yaml
+
+!/scripts/
+/scripts/*
+!/scripts/*.py
+
+!/references/
+/references/*
+!/references/attribute-index.json
+!/references/ensemble-schema.json
+!/references/rule-schema.json
+!/references/attributes/
+/references/attributes/*
+!/references/attributes/*.json
+
+# Defense in depth if allowlist rules are expanded later.
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/.uv-cache/
+**/.cache/
+**/*.duckdb
+**/*.db
+**/*.parquet
+**/*.part
+**/*.tmp
+**/.env
+**/.env.*
+**/*result*.json
+**/*validated*.json

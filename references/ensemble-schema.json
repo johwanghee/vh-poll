@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Virtual Human Poll Ensemble",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["question", "choices", "base_scores", "perspectives"],
+  "properties": {
+    "question": {"type": "string", "minLength": 1, "maxLength": 500},
+    "choices": {"type": "array", "minItems": 2, "maxItems": 4},
+    "base_scores": {"type": "object"},
+    "result_groups": {"type": "array", "items": {"enum": ["region", "age_bracket", "urbanicity"]}},
+    "perspectives": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "rationale", "factors"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}$"},
+          "label": {"type": "string", "minLength": 1, "maxLength": 60},
+          "rationale": {"type": "string", "minLength": 1, "maxLength": 240},
+          "factors": {"type": "array", "minItems": 2, "maxItems": 6}
+        }
+      }
+    },
+    "seed": {"type": "string", "maxLength": 128}
+  }
+}
+

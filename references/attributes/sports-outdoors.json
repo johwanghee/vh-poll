@@ -1,0 +1,260 @@
+{
+  "domain": "sports-outdoors",
+  "description": "Sports, exercise, competition, and outdoor activities.",
+  "attributes": {
+    "topic_fitness": [
+      "Passionate",
+      "Interested",
+      "Neutral",
+      "Indifferent",
+      "Averse"
+    ],
+    "sport_soccer": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_basketball": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_american_football": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_baseball": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_tennis": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_golf": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_cricket": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_rugby": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_hockey": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_volleyball": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_swimming": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_running": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_cycling": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_boxing": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_mma": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_wrestling": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_skiing": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_snowboarding": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_surfing": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_skateboarding": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_climbing": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_gymnastics": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_track_field": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_badminton": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_table_tennis": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_squash": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_sailing": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_rowing": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_martial_arts": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_yoga": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_pilates": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_crossfit": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_weightlifting": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_esports": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_darts": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_bowling": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_archery": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_equestrian": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_fencing": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "sport_triathlon": [
+      "Play",
+      "Follow",
+      "Casual",
+      "None"
+    ],
+    "lstyle_exercise_freq": [
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Rarely",
+      "Never"
+    ]
+  }
+}

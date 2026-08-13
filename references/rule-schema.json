@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Virtual Human Poll Rule",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["question", "choices", "base_scores", "factors"],
+  "properties": {
+    "question": {"type": "string", "minLength": 1, "maxLength": 500},
+    "choices": {"type": "array", "minItems": 2, "maxItems": 4, "items": {"type": "object", "additionalProperties": false, "required": ["id", "label"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}$"}, "label": {"type": "string", "minLength": 1, "maxLength": 60}}}},
+    "base_scores": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}},
+    "factors": {"type": "array", "maxItems": 12, "items": {"$ref": "#/$defs/factor"}},
+    "interactions": {"type": "array", "maxItems": 4},
+    "result_groups": {"type": "array", "maxItems": 3, "items": {"enum": ["region", "age_bracket", "urbanicity"]}},
+    "seed": {"type": "string", "maxLength": 128}
+  },
+  "$defs": {
+    "effects": {"type": "object", "additionalProperties": {"type": "number", "minimum": -0.25, "maximum": 0.25}},
+    "factor": {"type": "object", "additionalProperties": false, "required": ["attribute", "conditions", "effects", "reason"], "properties": {"attribute": {"type": "string"}, "conditions": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "effects": {"$ref": "#/$defs/effects"}, "reason": {"type": "string", "maxLength": 160}}}
+  }
+}
+
