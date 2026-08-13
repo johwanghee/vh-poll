@@ -24,6 +24,32 @@
         }
       }
     },
+    "hybrid_sensitivity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["excluded_direct_attributes", "fit_only_prior_id", "central_prior_id", "priors"],
+      "properties": {
+        "excluded_direct_attributes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "fit_only_prior_id": {"type": "string"},
+        "central_prior_id": {"type": "string"},
+        "priors": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "label", "rationale", "base_scores"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}$"},
+              "label": {"type": "string", "minLength": 1, "maxLength": 60},
+              "rationale": {"type": "string", "minLength": 1, "maxLength": 240},
+              "base_scores": {"type": "object", "additionalProperties": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}}
+            }
+          }
+        }
+      }
+    },
     "result_groups": {"type": "array", "items": {"enum": ["region", "age_bracket", "urbanicity"]}},
     "perspectives": {
       "type": "array",

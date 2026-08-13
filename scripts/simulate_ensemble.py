@@ -44,8 +44,56 @@ def validate_empirical_prior(document: dict, catalog: dict) -> set[str]:
     return used
 
 
+def validate_hybrid_sensitivity(document: dict, catalog: dict) -> tuple[set[str], list[dict]]:
+    hybrid = document.get("hybrid_sensitivity")
+    if not hybrid:
+        return set(), []
+    if document.get("empirical_prior"):
+        raise ValueError("empirical_prior and hybrid_sensitivity are mutually exclusive")
+    choice_ids = [choice["id"] for choice in document["choices"]]
+    excluded = set(hybrid.get("excluded_direct_attributes", []))
+    unknown = sorted(excluded - set(catalog["attributes"]))
+    if unknown:
+        raise ValueError(f"unknown excluded direct attributes: {unknown}")
+    if not excluded:
+        raise ValueError("hybrid_sensitivity requires excluded_direct_attributes")
+    priors = hybrid.get("priors", [])
+    if not 3 <= len(priors) <= 5:
+        raise ValueError("hybrid_sensitivity requires 3 to 5 priors")
+    ids = [prior.get("id") for prior in priors]
+    if len(ids) != len(set(ids)):
+        raise ValueError("hybrid prior ids must be unique")
+    if hybrid.get("central_prior_id") not in ids:
+        raise ValueError("central_prior_id must reference a hybrid prior")
+    if hybrid.get("fit_only_prior_id") not in ids:
+        raise ValueError("fit_only_prior_id must reference a hybrid prior")
+    for prior in priors:
+        scores = prior.get("base_scores", {})
+        if set(scores) != set(choice_ids):
+            raise ValueError(f"hybrid prior {prior.get('id')} base_scores must exactly match choice ids")
+        values = [float(scores[choice]) for choice in choice_ids]
+        if any(value <= 0 or value > 1 for value in values) or not 0.999 <= sum(values) <= 1.001:
+            raise ValueError(f"hybrid prior {prior.get('id')} base_scores must be positive and sum to 1")
+        if prior["id"] == hybrid["fit_only_prior_id"] and max(values) - min(values) > 0.001:
+            raise ValueError("fit-only hybrid prior must assign equal base scores")
+    return excluded, priors
+
+
 def resolve_prior(document: dict, catalog: dict, demo: bool) -> tuple[dict[str, float], dict]:
     authored = {choice["id"]: float(document["base_scores"][choice["id"]]) for choice in document["choices"]}
+    hybrid = document.get("hybrid_sensitivity")
+    if hybrid:
+        central = next(prior for prior in hybrid["priors"] if prior["id"] == hybrid["central_prior_id"])
+        scores = {choice["id"]: float(central["base_scores"][choice["id"]]) for choice in document["choices"]}
+        return scores, {
+            "mode": "hybrid_sensitivity",
+            "base_scores_used": scores,
+            "central_prior_id": central["id"],
+            "fit_only_prior_id": hybrid["fit_only_prior_id"],
+            "central_rationale": central["rationale"],
+            "excluded_direct_attributes": hybrid["excluded_direct_attributes"],
+            "method": "Option-specific direct attributes were excluded because coverage was asymmetric. Shared Persona fit factors are evaluated across authored familiarity-prior scenarios.",
+        }
     empirical = document.get("empirical_prior")
     if not empirical or demo:
         reason = "no_empirical_prior" if not empirical else "demo_mode_has_no_persona_observations"
@@ -181,7 +229,9 @@ def factor_observations(validated: list[tuple[dict, dict]], persona_count: int, 
 def aggregate(document: dict, mode: str, demo: bool, demo_size: int) -> dict:
     catalog = load_attribute_catalog()
     empirical_attributes = validate_empirical_prior(document, catalog)
+    hybrid_attributes, hybrid_priors = validate_hybrid_sensitivity(document, catalog)
     resolved_scores, prior_evidence = resolve_prior(document, catalog, demo)
+    original_document = document
     document = {**document, "base_scores": resolved_scores}
     choice_ids = [choice["id"] for choice in document["choices"]]
     labels = {choice["id"]: choice["label"] for choice in document["choices"]}
@@ -190,9 +240,9 @@ def aggregate(document: dict, mode: str, demo: bool, demo_size: int) -> dict:
     signal_counter: dict[tuple[str, tuple[str, ...], str], list[str]] = collections.defaultdict(list)
     validated = validate_ensemble(document)
     for perspective, rule in validated:
-        repeated = sorted({factor["attribute"] for factor in rule["factors"]} & empirical_attributes)
+        repeated = sorted({factor["attribute"] for factor in rule["factors"]} & (empirical_attributes | hybrid_attributes))
         if repeated:
-            raise ValueError(f"empirical prior evidence cannot be reused as perspective effects: {repeated}")
+            raise ValueError(f"direct option evidence cannot be reused as perspective effects: {repeated}")
         result = calculate(rule, mode, demo, demo_size, catalog)
         if persona_count is None:
             persona_count = result["persona_count"]
@@ -244,6 +294,59 @@ def aggregate(document: dict, mode: str, demo: bool, demo_size: int) -> dict:
         for key, perspectives in signal_counter.items()
         if len(perspectives) >= 2
     ]
+    prior_sensitivity = None
+    if hybrid_priors:
+        scenarios = []
+        for prior in hybrid_priors:
+            if prior["id"] == original_document["hybrid_sensitivity"]["central_prior_id"]:
+                percentages = {choice["id"]: choice["percent"] for choice in choices}
+            else:
+                scenario_values: dict[str, list[float]] = {choice: [] for choice in choice_ids}
+                for perspective in original_document["perspectives"]:
+                    rule = validate(
+                        {
+                            "question": original_document["question"],
+                            "choices": original_document["choices"],
+                            "base_scores": prior["base_scores"],
+                            "factors": perspective["factors"],
+                            "result_groups": [],
+                            "seed": normalized_seed(original_document["question"], original_document.get("seed")),
+                        }
+                    )
+                    result = calculate(rule, mode, demo, demo_size, catalog)
+                    for item in result["choices"]:
+                        scenario_values[item["id"]].append(item["percent"])
+                percentages = {choice: round(statistics.mean(values), 2) for choice, values in scenario_values.items()}
+            ranked = sorted(choice_ids, key=percentages.get, reverse=True)
+            margin = round(percentages[ranked[0]] - percentages[ranked[1]], 2)
+            winner = ranked[0] if margin >= 1.0 else None
+            scenarios.append(
+                {
+                    "id": prior["id"],
+                    "label": prior["label"],
+                    "rationale": prior["rationale"],
+                    "base_scores": prior["base_scores"],
+                    "percentages": percentages,
+                    "winner": winner,
+                    "verdict": "winner" if winner else "near_tie",
+                    "margin_pp": margin,
+                }
+            )
+        scenario_winners = {scenario["winner"] for scenario in scenarios}
+        stable_winner = next(iter(scenario_winners)) if len(scenario_winners) == 1 and None not in scenario_winners else None
+        prior_sensitivity = {
+            "status": "stable" if stable_winner else "assumption_sensitive",
+            "winner": stable_winner,
+            "near_tie_threshold_pp": 1.0,
+            "scenarios": scenarios,
+            "choice_ranges": {
+                choice: {
+                    "min": min(scenario["percentages"][choice] for scenario in scenarios),
+                    "max": max(scenario["percentages"][choice] for scenario in scenarios),
+                }
+                for choice in choice_ids
+            },
+        }
     return {
         "question": document["question"],
         "mode": mode,
@@ -257,6 +360,7 @@ def aggregate(document: dict, mode: str, demo: bool, demo_size: int) -> dict:
         "perspectives": perspective_results,
         "robust_signals": robust_signals,
         "prior_evidence": prior_evidence,
+        "prior_sensitivity": prior_sensitivity,
         "evidence_note": {
             "computed": "Empirical-prior matches, coverage, percentages, ranges, group sizes, and lifts are deterministic aggregations over the processed Persona rows.",
             "assumed": "Perspective selection, factor-to-choice direction, and effect sizes are LLM-authored scenario assumptions, not relationships learned or validated from survey outcomes.",

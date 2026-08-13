@@ -158,6 +158,8 @@ uv run python scripts/setup_data.py verify
 
 선택지마다 `sport_soccer`와 `sport_basketball`처럼 정확히 대응하는 속성이 있으면, 엔진은 각 선택지의 긍정적인 관심 값이 관측된 수를 정규화해 empirical prior로 사용합니다. 같은 직접 속성을 관점 효과에서 다시 사용하는 것은 검증기가 차단합니다. 정확한 대응 속성이 없으면 LLM이 작성한 fallback base score를 사용하며 이를 시나리오 가정이라고 표시합니다.
 
+일부 선택지에만 직접 속성이 있으면 `hybrid-sensitivity` 모드를 사용합니다. 비대칭 직접 속성은 양쪽 계산에서 모두 제외하고, 공통 취향 적합도를 동일 prior에서 계산한 결과와 여러 단계의 인지도 prior 결과를 함께 냅니다. 1%p 미만 격차는 `near-tie`로 처리하며 모든 prior에서 같은 비접전 승자가 유지될 때만 `stable`, 그 외에는 `assumption-sensitive`로 표시합니다. 인지도 prior는 Persona 관측값이 아니라 공개된 LLM 시나리오 가정입니다.
+
 그 밖의 속성과 선택지 연결 방향은 데이터에서 학습한 상관관계나 인과효과가 아닙니다. LLM이 질문별로 만든 명시적인 시나리오 가정입니다. 표시된 비율과 범위는 선언된 prior와 규칙을 전체 Persona 데이터에 적용해 계산한 값입니다. `expected` 모드의 `count`는 실제로 표를 던진 사람 수가 아니라 각 Persona의 선택 확률을 더한 **확률 합계 환산**입니다.
 
 ## 처리 구조
@@ -166,6 +168,7 @@ uv run python scripts/setup_data.py verify
 질문
   → 관련 속성 카탈로그 선택
   → 직접 대응 속성이 있으면 관측 매칭 수로 prior 계산
+  → 직접 속성이 비대칭이면 fit-only + 인지도 prior 민감도 계산
   → 서로 다른 3개 관점의 JSON 규칙 생성·검증
   → ZSTD Parquet를 embedded DuckDB로 집계
   → 평균, 범위, 그룹 차이, 강건성 설명
