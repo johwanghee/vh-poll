@@ -3,8 +3,9 @@
 
 # Repository metadata
 !/.gitignore
+!/README.md
 
-# Codex skill package
+# Agent Skill package
 !/SKILL.md
 !/pyproject.toml
 !/uv.lock
