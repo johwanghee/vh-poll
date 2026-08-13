@@ -26,7 +26,7 @@ For “다시 돌려줘” or “다른 결과로”, preserve the rule and pass
 - Preserve explicit choices; otherwise create two to four concise choices without changing the premise.
 - Assign fallback base scores totaling 1. Treat them as authored assumptions, not observed popularity.
 - Use `empirical_prior` only when each choice maps cleanly to its own direct catalog attribute. Provide one to three selectors per choice, use symmetric value criteria, and omit it for incomplete or proxy-only mappings. The engine normalizes observed match counts into the shared prior and reports match coverage and missingness.
-- Use `hybrid_sensitivity` for asymmetric direct coverage. Exclude all option-specific direct attributes from every perspective. Include an equal-score fit-only prior plus at least two plausible familiarity priors. Keep the scenario ordering and rationale explicit; do not present familiarity scores as Persona observations or tune them to force a desired winner. The engine treats margins below 1 percentage point as `near_tie` and reports `stable` only when every prior has the same non-tied winner; otherwise it reports `assumption_sensitive`.
+- Use `hybrid_sensitivity` for asymmetric direct coverage. Exclude all option-specific direct attributes from every perspective. Include an equal-score fit-only scenario plus at least two plausible familiarity scenarios. Name the central scenario `현실 인지도 포함` and the equal-score scenario `취향만 비교`; keep stronger stress cases internal. In each rationale, explain the scores as choice probabilities before Persona traits are applied. Do not present them as observations or tune them to force a desired winner. The engine treats margins below 1 percentage point as `near_tie` and reports `stable` only when every scenario has the same non-tied winner; otherwise it reports `assumption_sensitive`.
 - Select three to eight directly relevant factors when the catalog supports them. Prefer domain-specific attributes over broad proxies, and omit weakly related factors rather than filling a quota.
 - Create exactly three perspectives by default, with two to six factors each. Do not reuse an empirical-prior attribute in any perspective. Do not reuse other attributes across perspectives unless independently central; repeated support then becomes a robust signal.
 - Keep one shared base score map and comparable effect magnitudes across perspectives. Do not change them to force agreement or a more dramatic result.
@@ -47,7 +47,18 @@ Route questions with these catalog files:
 
 ## Present results
 
-Lead with an apt emoji and `persona_count_per_perspective`. Never multiply it by the perspective count because the same personas are re-evaluated. Show ensemble percentages and min–max ranges. In `expected` mode, label `count` as `확률 합계 환산`, never as people who actually cast votes; only `sampled_vote_count` is a hard simulated count. For `empirical_direct`, show per-choice matches, match share, coverage, and missingness. For `hybrid_sensitivity`, label the headline as the central authored familiarity scenario, show the equal-prior fit-only result and the full `choice_ranges`, and use `prior_sensitivity.status` as the primary robustness verdict. Say exactly which direct attributes were excluded. Never call a hybrid result observed popularity. For authored fallback, state that the starting scores are assumptions. Then report perspective stability separately. Use `robust_signals` first; when empty, say no factor repeated across independent perspectives. Include one clearly fictional witty line.
+Keep the default answer playful and under 180 Korean words. Lead with an apt emoji and the two-to-four headline percentages. Mention `persona_count_per_perspective` once as `가상 페르소나 N명`; never multiply it by perspective count. Follow with two or three plain-language sentences explaining what drove the result, one clearly fictional witty line, and the required disclaimer.
+
+For `hybrid_sensitivity`, use this order:
+
+1. `현실 인지도까지 넣으면` followed by the central scenario percentages.
+2. `이름표를 가리고 취향만 보면` followed by the fit-only percentages and `사실상 동률` when its verdict is `near_tie`.
+3. If sensitivity is `stable`, say the lead survived every tested assumption. If `assumption_sensitive`, say plainly how the conclusion changes, such as `취향은 접전이고 인지도 가정이 승부를 갈랐습니다`.
+4. Add one short trust note: name excluded direct attributes in friendly language and say the familiarity starting point was an explicit scenario assumption, not a Persona observation.
+
+Do not show the terms `prior`, `central`, `moderate`, `strong`, `hybrid_sensitivity`, `assumption_sensitive`, scenario IDs, engine names, full sensitivity ranges, effect coefficients, or internal evidence labels in the default answer. Do not print every scenario. Reveal these details only when the user asks for methodology, full evidence, or debugging. When explaining a starting score, call it `Persona 성향을 적용하기 전의 출발 확률` and give its exact numbers.
+
+For `empirical_direct`, briefly show observed match share and coverage before the playful interpretation. For authored fallback, say the starting point was a scenario assumption. In `expected` mode, show `count` only if useful and label it `확률 합계 환산`; never call it people who cast votes. Show perspective ranges, group breakdowns, and robust signals only when they materially explain the result or the user asks. Never call a hybrid result observed popularity.
 
 When explaining a result, separate evidence into three labels:
 
